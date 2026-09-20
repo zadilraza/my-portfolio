@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Adil Zaidi – Electrical Engineering Portfolio
 
-## Getting Started
+This repository contains my personal engineering portfolio website.
 
-First, run the development server:
+The site highlights my background in Electrical Engineering at Arizona State University, including coursework, technical skills, engineering labs, and project experience.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Built With
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Next.js
+- TypeScript
+- Tailwind CSS
+- Vercel
+- GitHub
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Featured Areas
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Circuit Analysis
+- LTspice Simulation
+- Power Systems
+- Semiconductor Devices
+- Arduino and Embedded Systems
+- Verilog
+- FPGA Development
+- Quartus Prime
+- Questa / ModelSim
 
-## Learn More
+## Projects and Engineering Work
 
-To learn more about Next.js, take a look at the following resources:
+### Gesture-Controlled Portable Workstation
+Arduino-based electromechanical project involving DC motors, motor-driver circuitry, embedded control logic, and system testing.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Analog Circuit Simulation and Characterization
+LTspice-based analysis of op-amp circuits, filters, transient response, AC response, bandwidth, and unity-gain frequency.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Digital Logic and FPGA Labs
+Verilog-based digital design work using testbenches, waveform simulation, Quartus Prime, and Questa/ModelSim.
 
-## Deploy on Vercel
+## Live Portfolio
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Deployed with Vercel.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contact
+
+LinkedIn: https://www.linkedin.com/in/adil-zaidi-aa62b8254/
+
+GitHub: https://github.com/zadilraza
