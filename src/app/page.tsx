@@ -17,23 +17,38 @@ const projects = [
   {
     number: "01",
     title: "Gesture-Controlled Portable Workstation",
-    subtitle: "Arduino · Embedded Systems · Motor Control",
+    subtitle: "Embedded Systems · Motor Control",
     description:
-      "Built an Arduino-based electromechanical workstation integrating DC motors, motor-driver circuitry, embedded control logic, and a wheeled chassis. Tested and refined the system for responsive and reliable movement.",
+      "Built an Arduino-based electromechanical workstation using DC motors, motor-driver circuitry, embedded control logic, and a wheeled chassis.",
+    did:
+      "Integrated the electrical, mechanical, and software parts of the system and tested movement and control behavior.",
+    learned:
+      "Improved my troubleshooting, hardware integration, and system testing skills.",
+    tags: ["Arduino", "C/C++", "Motor Drivers", "Embedded Systems"],
   },
   {
     number: "02",
     title: "Analog Circuit Simulation & Characterization",
-    subtitle: "LTspice · OP07 · Filters · AC Analysis",
+    subtitle: "Op-Amps · Filters · Frequency Response",
     description:
-      "Simulated op-amp circuits and RC filters using transient and AC sweep analysis. Evaluated gain, phase response, cutoff frequency, bandwidth, and unity-gain frequency while comparing theoretical and simulated results.",
+      "Simulated and analyzed analog circuits in LTspice, including op-amp configurations and filter behavior.",
+    did:
+      "Used transient and AC sweep analysis to evaluate gain, phase, cutoff frequency, bandwidth, and unity-gain frequency.",
+    learned:
+      "Strengthened my understanding of practical circuit behavior and the relationship between theoretical and simulated results.",
+    tags: ["LTspice", "OP07", "AC Sweep", "Circuit Analysis"],
   },
   {
     number: "03",
-    title: "Digital Logic & FPGA Labs",
-    subtitle: "Verilog · Quartus Prime · Questa",
+    title: "Digital Logic & FPGA Development",
+    subtitle: "Verilog · Simulation · FPGA",
     description:
-      "Currently developing digital hardware skills through Verilog modules, testbenches, waveform simulation, combinational logic, and FPGA development workflows.",
+      "Developing digital hardware skills through Verilog design, waveform simulation, and FPGA-based laboratory work.",
+    did:
+      "Created logic modules, wrote and tested digital designs, analyzed simulation waveforms, and worked through FPGA development workflows.",
+    learned:
+      "Building experience with digital logic design, debugging, verification, and hardware implementation.",
+    tags: ["Verilog", "FPGA", "Quartus Prime", "Questa / ModelSim"],
   },
 ];
 
@@ -228,44 +243,95 @@ export default function Home() {
       </section>
 
       {/* PROJECTS */}
-      <section id="projects" className="border-t border-white/10 px-6 py-28">
-        <div className="mx-auto max-w-6xl">
-          <p className="text-sm uppercase tracking-[0.3em] text-blue-400">
-            03 / Engineering Work
-          </p>
+      {/* PROJECTS */}
+<section id="projects" className="border-t border-white/10 px-6 py-28">
+  <div className="mx-auto max-w-6xl">
+    <p className="text-sm uppercase tracking-[0.3em] text-blue-400">
+      03 / Engineering Work
+    </p>
 
-          <h2 className="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl">
-            Selected projects & labs.
-          </h2>
+    <div className="mt-5 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+      <h2 className="max-w-2xl text-4xl font-semibold tracking-tight sm:text-5xl">
+        Selected projects & engineering labs.
+      </h2>
 
-          <div className="mt-14 grid gap-6">
-            {projects.map((project) => (
-              <article
-                key={project.title}
-                className="group grid gap-6 rounded-3xl border border-white/10 bg-white/[0.02] p-8 transition duration-300 hover:-translate-y-1 hover:border-white/20 md:grid-cols-[100px_1fr]"
-              >
-                <div className="text-4xl font-light text-white/20 transition group-hover:text-blue-400">
-                  {project.number}
-                </div>
+      <p className="max-w-sm text-sm leading-6 text-gray-500">
+        Hands-on work across embedded systems, analog circuits, simulation, and
+        digital hardware.
+      </p>
+    </div>
 
-                <div>
-                  <p className="text-xs uppercase tracking-[0.2em] text-gray-500">
-                    {project.subtitle}
-                  </p>
-
-                  <h3 className="mt-3 text-2xl font-semibold sm:text-3xl">
-                    {project.title}
-                  </h3>
-
-                  <p className="mt-5 max-w-3xl leading-7 text-gray-400">
-                    {project.description}
-                  </p>
-                </div>
-              </article>
-            ))}
+    <div className="mt-14 space-y-6">
+      {projects.map((project) => (
+        <article
+          key={project.title}
+          className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] p-8 transition duration-300 hover:-translate-y-1 hover:border-blue-400/30 hover:bg-white/[0.035] sm:p-10"
+        >
+          <div className="absolute right-6 top-4 text-7xl font-semibold tracking-tight text-white/[0.025] transition duration-300 group-hover:text-blue-400/[0.06]">
+            {project.number}
           </div>
-        </div>
-      </section>
+
+          <div className="relative z-10">
+            <div className="flex flex-col gap-6 lg:grid lg:grid-cols-[180px_1fr]">
+              <div>
+                <p className="text-sm font-medium text-blue-400">
+                  Project {project.number}
+                </p>
+
+                <p className="mt-2 text-xs uppercase leading-5 tracking-[0.18em] text-gray-600">
+                  {project.subtitle}
+                </p>
+              </div>
+
+              <div>
+                <h3 className="max-w-3xl text-2xl font-semibold tracking-tight sm:text-3xl">
+                  {project.title}
+                </h3>
+
+                <p className="mt-5 max-w-3xl leading-7 text-gray-400">
+                  {project.description}
+                </p>
+
+                <div className="mt-8 grid gap-6 border-t border-white/10 pt-7 md:grid-cols-2">
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.2em] text-gray-600">
+                      What I Did
+                    </p>
+
+                    <p className="mt-3 leading-7 text-gray-300">
+                      {project.did}
+                    </p>
+                  </div>
+
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.2em] text-gray-600">
+                      What I Learned
+                    </p>
+
+                    <p className="mt-3 leading-7 text-gray-300">
+                      {project.learned}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="mt-7 flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full border border-white/10 bg-black/30 px-3 py-1.5 text-xs text-gray-400 transition group-hover:border-white/20 group-hover:text-gray-300"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* COURSEWORK */}
       <section
