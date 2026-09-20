@@ -247,7 +247,7 @@ export default function Home() {
         </a>
 
         <a
-          href="mailto:zaidiraza@gmail.com"
+          href="mailto:zadilraza@gmail.com"
           className="transition hover:text-blue-300"
         >
           Email ↗
@@ -629,7 +629,7 @@ export default function Home() {
         </div>
 
         <a
-          href="mailto:zaidiraza@gmail.com"
+          href="mailto:zadilraza@gmail.com"
           className="inline-flex w-fit items-center justify-center rounded-full bg-white px-8 py-4 font-medium text-black transition duration-300 hover:scale-105 hover:bg-gray-200"
         >
           Get In Touch
