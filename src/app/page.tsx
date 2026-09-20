@@ -175,7 +175,7 @@ export default function Home() {
   <div className="relative z-10 mx-auto w-full max-w-6xl">
     <div className="max-w-4xl">
       {/* Availability */}
-      <div className="mb-7 inline-flex items-center gap-3 rounded-full border border-blue-400/20 bg-blue-400/[0.05] px-4 py-2 text-sm text-blue-200">
+      <div className="animate-fade-up mb-7 inline-flex items-center gap-3 rounded-full border border-blue-400/20 bg-blue-400/[0.05] px-4 py-2 text-sm text-blue-200">
         <span className="relative flex h-2 w-2">
           <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-40" />
           <span className="relative inline-flex h-2 w-2 rounded-full bg-green-400" />
@@ -185,7 +185,7 @@ export default function Home() {
       </div>
 
       {/* Name */}
-      <h1 className="text-6xl font-bold tracking-[-0.05em] sm:text-7xl md:text-8xl lg:text-9xl">
+      <h1 className="animate-fade-up-delay-1 text-6xl font-bold tracking-[-0.05em] sm:text-7xl md:text-8xl lg:text-9xl">
         Adil Zaidi
         <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">
           .
@@ -193,7 +193,7 @@ export default function Home() {
       </h1>
 
       {/* Main positioning */}
-      <h2 className="mt-6 max-w-3xl text-2xl font-medium leading-tight text-gray-300 sm:text-3xl md:text-4xl">
+      <h2 className="animate-fade-up-delay-2 mt-6 max-w-3xl text-2xl font-medium leading-tight text-gray-300 sm:text-3xl md:text-4xl">
         Electrical engineering student building experience across
         <span className="bg-gradient-to-r from-blue-300 to-violet-300 bg-clip-text text-transparent">
           {" "}
@@ -201,14 +201,14 @@ export default function Home() {
         </span>
       </h2>
 
-      <p className="mt-7 max-w-2xl text-base leading-8 text-gray-400 sm:text-lg">
+      <p className="animate-fade-up-delay-3 mt-7 max-w-2xl text-base leading-8 text-gray-400 sm:text-lg">
         Studying Electrical Engineering at Arizona State University with
         experience across circuit analysis, power systems, semiconductor
         devices, embedded systems, and digital hardware.
       </p>
 
       {/* Buttons */}
-      <div className="mt-10 flex flex-wrap gap-4">
+      <div className="animate-fade-up-delay-3 mt-10 flex flex-wrap gap-4">
         <a
           href="#projects"
           className="rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-7 py-3.5 font-medium text-white transition duration-300 hover:scale-[1.03] hover:brightness-110"
