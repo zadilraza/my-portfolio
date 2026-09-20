@@ -66,117 +66,215 @@ export default function Home() {
     <main className="min-h-screen bg-[#050505] text-white selection:bg-blue-500/30">
 
       {/* NAVBAR */}
-      <nav className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-black/70 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <a
-            href="#home"
-            className="text-lg font-bold tracking-tight transition hover:opacity-70"
-          >
-            AZ<span className="text-blue-400">.</span>
-          </a>
+<nav className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-[#050505]/80 backdrop-blur-xl">
+  <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+    <a
+      href="#home"
+      className="text-lg font-bold tracking-tight transition hover:opacity-70"
+    >
+      AZ<span className="text-blue-400">.</span>
+    </a>
 
-          <div className="hidden items-center gap-7 text-sm text-gray-400 md:flex">
-            <a href="#about" className="transition hover:text-white">
-              About
-            </a>
-            <a href="#skills" className="transition hover:text-white">
-              Skills
-            </a>
-            <a href="#projects" className="transition hover:text-white">
-              Projects
-            </a>
-            <a href="#coursework" className="transition hover:text-white">
-              Coursework
-            </a>
-            <a href="#contact" className="transition hover:text-white">
-              Contact
-            </a>
+    {/* Desktop Navigation */}
+    <div className="hidden items-center gap-7 text-sm text-gray-400 md:flex">
+      <a href="#about" className="transition hover:text-white">
+        About
+      </a>
 
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              className="rounded-full border border-white/20 px-4 py-2 text-white transition hover:border-white"
-            >
-              Resume
-            </a>
-          </div>
-        </div>
-      </nav>
+      <a href="#skills" className="transition hover:text-white">
+        Skills
+      </a>
 
-      {/* HERO */}
-      <section
-        id="home"
-        className="relative flex min-h-screen items-center justify-center overflow-hidden px-6"
+      <a href="#projects" className="transition hover:text-white">
+        Projects
+      </a>
+
+      <a href="#coursework" className="transition hover:text-white">
+        Coursework
+      </a>
+
+      <a href="#contact" className="transition hover:text-white">
+        Contact
+      </a>
+
+      <a
+        href="/resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="rounded-full border border-white/20 px-4 py-2 text-white transition hover:border-white hover:bg-white/5"
       >
-        <div className="absolute left-1/2 top-1/3 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-blue-600/10 blur-[120px]" />
+        Resume ↗
+      </a>
+    </div>
 
-        <div className="absolute right-[10%] top-[20%] h-48 w-48 rounded-full bg-purple-600/5 blur-[100px]" />
+    {/* Mobile Navigation */}
+    <details className="relative md:hidden">
+      <summary className="cursor-pointer list-none rounded-full border border-white/15 px-4 py-2 text-sm text-gray-300">
+        Menu
+      </summary>
 
-        <div className="relative z-10 max-w-5xl text-center">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm text-gray-400">
-            <span className="h-2 w-2 animate-pulse rounded-full bg-green-400" />
-            Open to Engineering Internships & Co-ops
-          </div>
+      <div className="absolute right-0 mt-3 w-52 overflow-hidden rounded-2xl border border-white/10 bg-[#0a0a0a] p-2 shadow-2xl">
+        <a
+          href="#about"
+          className="block rounded-xl px-4 py-3 text-sm text-gray-400 transition hover:bg-white/5 hover:text-white"
+        >
+          About
+        </a>
 
-          <h1 className="text-5xl font-bold tracking-[-0.04em] sm:text-7xl md:text-8xl">
-            Adil Zaidi
-          </h1>
+        <a
+          href="#skills"
+          className="block rounded-xl px-4 py-3 text-sm text-gray-400 transition hover:bg-white/5 hover:text-white"
+        >
+          Skills
+        </a>
 
-          <h2 className="mt-4 text-2xl font-medium text-gray-400 sm:text-3xl">
-            Electrical Engineering Student
-          </h2>
+        <a
+          href="#projects"
+          className="block rounded-xl px-4 py-3 text-sm text-gray-400 transition hover:bg-white/5 hover:text-white"
+        >
+          Projects
+        </a>
 
-          <p className="mx-auto mt-7 max-w-2xl text-lg leading-8 text-gray-400">
-            Building experience across circuits, power systems, semiconductor
-            devices, embedded systems, and digital hardware at Arizona State
-            University.
-          </p>
+        <a
+          href="#coursework"
+          className="block rounded-xl px-4 py-3 text-sm text-gray-400 transition hover:bg-white/5 hover:text-white"
+        >
+          Coursework
+        </a>
 
-          <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <a
-              href="#projects"
-              className="rounded-full bg-white px-7 py-3 font-medium text-black transition duration-300 hover:scale-105 hover:bg-gray-200"
+        <a
+          href="#contact"
+          className="block rounded-xl px-4 py-3 text-sm text-gray-400 transition hover:bg-white/5 hover:text-white"
+        >
+          Contact
+        </a>
+
+        <a
+          href="/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-1 block rounded-xl bg-white px-4 py-3 text-sm font-medium text-black"
+        >
+          View Resume ↗
+        </a>
+      </div>
+    </details>
+  </div>
+</nav>
+
+{/* HERO */}
+<section
+  id="home"
+  className="relative flex min-h-screen items-center overflow-hidden px-6 pb-16 pt-28"
+>
+  {/* Background glow */}
+  <div className="pointer-events-none absolute left-1/2 top-[32%] h-[550px] w-[550px] -translate-x-1/2 rounded-full bg-blue-600/10 blur-[130px]" />
+
+  <div className="pointer-events-none absolute -right-24 top-1/4 h-80 w-80 rounded-full bg-purple-500/[0.05] blur-[120px]" />
+
+  <div className="relative z-10 mx-auto w-full max-w-6xl">
+    <div className="max-w-4xl">
+      {/* Availability */}
+      <div className="mb-7 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm text-gray-400">
+        <span className="relative flex h-2 w-2">
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-40" />
+          <span className="relative inline-flex h-2 w-2 rounded-full bg-green-400" />
+        </span>
+
+        Open to Electrical Engineering Internships & Co-ops
+      </div>
+
+      {/* Name */}
+      <h1 className="text-6xl font-bold tracking-[-0.05em] sm:text-7xl md:text-8xl lg:text-9xl">
+        Adil Zaidi<span className="text-blue-400">.</span>
+      </h1>
+
+      {/* Main positioning */}
+      <h2 className="mt-6 max-w-3xl text-2xl font-medium leading-tight text-gray-300 sm:text-3xl md:text-4xl">
+        Electrical engineering student turning theory into
+        <span className="text-white"> practical hardware experience.</span>
+      </h2>
+
+      <p className="mt-7 max-w-2xl text-base leading-8 text-gray-500 sm:text-lg">
+        Studying Electrical Engineering at Arizona State University with
+        experience across circuit analysis, power systems, semiconductor
+        devices, embedded systems, and digital hardware.
+      </p>
+
+      {/* Buttons */}
+      <div className="mt-10 flex flex-wrap gap-4">
+        <a
+          href="#projects"
+          className="rounded-full bg-white px-7 py-3.5 font-medium text-black transition duration-300 hover:scale-[1.03] hover:bg-gray-200"
+        >
+          Explore My Work
+        </a>
+
+        <a
+          href="/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rounded-full border border-white/20 px-7 py-3.5 font-medium text-white transition duration-300 hover:border-white/50 hover:bg-white/5"
+        >
+          View Resume ↗
+        </a>
+      </div>
+
+      {/* Social Links */}
+      <div className="mt-9 flex flex-wrap gap-x-7 gap-y-3 text-sm text-gray-500">
+        <a
+          href="https://www.linkedin.com/in/adil-zaidi-aa62b8254/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="transition hover:text-white"
+        >
+          LinkedIn ↗
+        </a>
+
+        <a
+          href="https://github.com/zadilraza"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="transition hover:text-white"
+        >
+          GitHub ↗
+        </a>
+
+        <a
+          href="mailto:zaidiraza@gmail.com"
+          className="transition hover:text-white"
+        >
+          Email ↗
+        </a>
+      </div>
+    </div>
+
+    {/* Currently Learning */}
+    <div className="mt-16 max-w-4xl border-t border-white/10 pt-7">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-8">
+        <p className="text-xs uppercase tracking-[0.25em] text-gray-600">
+          Currently Building
+        </p>
+
+        <div className="flex flex-wrap gap-2">
+          {[
+            "Verilog",
+            "FPGA Development",
+            "Quartus Prime",
+            "Questa / ModelSim",
+          ].map((item) => (
+            <span
+              key={item}
+              className="rounded-full border border-white/10 bg-white/[0.02] px-3 py-1.5 text-xs text-gray-400"
             >
-              Explore My Work
-            </a>
-
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              className="rounded-full border border-white/20 px-7 py-3 font-medium transition duration-300 hover:border-white hover:bg-white/5"
-            >
-              View Resume ↗
-            </a>
-          </div>
-
-          <div className="mt-9 flex justify-center gap-6 text-sm text-gray-500">
-            <a
-              href="https://www.linkedin.com/in/adil-zaidi-aa62b8254/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition hover:text-white"
-            >
-              LinkedIn ↗
-            </a>
-
-            <a
-              href="https://github.com/zadilraza"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition hover:text-white"
-            >
-              GitHub ↗
-            </a>
-
-            <a
-              href="mailto:zaidiraza@gmail.com"
-              className="transition hover:text-white"
-            >
-              Email ↗
-            </a>
-          </div>
+              {item}
+            </span>
+          ))}
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* ABOUT */}
 <section id="about" className="border-t border-white/10 px-6 py-28">
