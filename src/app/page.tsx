@@ -136,7 +136,7 @@ export default function Home() {
 
           <div className="mt-9 flex justify-center gap-6 text-sm text-gray-500">
             <a
-              href="https://www.linkedin.com/"
+              href="https://www.linkedin.com/in/adil-zaidi-aa62b8254/"
               target="_blank"
               rel="noopener noreferrer"
               className="transition hover:text-white"
@@ -145,7 +145,7 @@ export default function Home() {
             </a>
 
             <a
-              href="https://github.com/"
+              href="https://github.com/zadilraza"
               target="_blank"
               rel="noopener noreferrer"
               className="transition hover:text-white"
