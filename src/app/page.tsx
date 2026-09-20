@@ -179,69 +179,174 @@ export default function Home() {
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="border-t border-white/10 px-6 py-28">
-        <div className="mx-auto max-w-6xl">
-          <p className="text-sm uppercase tracking-[0.3em] text-blue-400">
-            01 / About
-          </p>
+<section id="about" className="border-t border-white/10 px-6 py-28">
+  <div className="mx-auto max-w-6xl">
+    <p className="text-sm uppercase tracking-[0.3em] text-blue-400">
+      01 / About
+    </p>
 
-          <div className="mt-8 grid gap-14 md:grid-cols-[1fr_1.2fr]">
-            <h2 className="text-4xl font-semibold tracking-tight sm:text-5xl">
-              Learning engineering by building, testing, and understanding.
-            </h2>
+    <div className="mt-8 grid gap-14 lg:grid-cols-[1.05fr_1fr]">
+      <div>
+        <h2 className="text-4xl font-semibold tracking-tight sm:text-5xl">
+          Engineering through analysis, testing, and hands-on problem solving.
+        </h2>
 
-            <div className="space-y-5 text-lg leading-8 text-gray-400">
-              <p>
-                I&apos;m an Electrical Engineering student at Arizona State
-                University with interests spanning analog circuits, power
-                systems, semiconductor devices, embedded systems, and digital
-                hardware.
-              </p>
+        <div className="mt-8 flex flex-wrap gap-3">
+          <span className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm text-gray-400">
+            Arizona State University
+          </span>
 
-              <p>
-                I enjoy connecting classroom theory with hands-on engineering —
-                whether that means analyzing a circuit in LTspice, taking
-                measurements with laboratory equipment, building an embedded
-                system, or developing Verilog and FPGA skills.
-              </p>
+          <span className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm text-gray-400">
+            Electrical Engineering
+          </span>
 
-              <p>
-                I&apos;m currently seeking opportunities where I can contribute,
-                learn from experienced engineers, and build deeper practical
-                experience.
-              </p>
-            </div>
-          </div>
+          <span className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm text-gray-400">
+            Open to Internships & Co-ops
+          </span>
         </div>
-      </section>
+      </div>
 
-      {/* SKILLS */}
-      <section
-        id="skills"
-        className="border-t border-white/10 bg-white/[0.015] px-6 py-28"
-      >
-        <div className="mx-auto max-w-6xl">
-          <p className="text-sm uppercase tracking-[0.3em] text-blue-400">
-            02 / Technical Skills
-          </p>
+      <div className="space-y-6 text-lg leading-8 text-gray-400">
+        <p>
+          I&apos;m an Electrical Engineering student at Arizona State University
+          building experience across analog circuits, power systems,
+          semiconductor devices, embedded systems, and digital hardware.
+        </p>
 
-          <h2 className="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl">
-            Tools I&apos;m working with.
-          </h2>
+        <p>
+          I enjoy connecting classroom theory with practical engineering work.
+          That includes circuit simulation in LTspice, using laboratory
+          equipment, working with embedded hardware, and developing my Verilog
+          and FPGA skills.
+        </p>
 
-          <div className="mt-12 flex flex-wrap gap-3">
-            {skills.map((skill) => (
-              <span
-                key={skill}
-                className="rounded-full border border-white/10 bg-white/[0.03] px-5 py-3 text-sm text-gray-300 transition duration-300 hover:-translate-y-1 hover:border-blue-400/50 hover:text-white"
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
+        <p>
+          I&apos;m especially interested in opportunities where I can strengthen
+          my troubleshooting, testing, and design skills while contributing to
+          real engineering systems.
+        </p>
+      </div>
+    </div>
+
+    <div className="mt-16 grid gap-px overflow-hidden rounded-3xl border border-white/10 bg-white/10 sm:grid-cols-3">
+      <div className="bg-[#080808] p-7">
+        <p className="text-3xl font-semibold">Analog</p>
+        <p className="mt-2 text-sm leading-6 text-gray-500">
+          Circuits, op-amps, filters, simulation, and measurement.
+        </p>
+      </div>
+
+      <div className="bg-[#080808] p-7">
+        <p className="text-3xl font-semibold">Digital</p>
+        <p className="mt-2 text-sm leading-6 text-gray-500">
+          Verilog, FPGA workflows, logic design, and simulation.
+        </p>
+      </div>
+
+      <div className="bg-[#080808] p-7">
+        <p className="text-3xl font-semibold">Power</p>
+        <p className="mt-2 text-sm leading-6 text-gray-500">
+          Power systems coursework and interest in electrical infrastructure.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+     {/* SKILLS */}
+<section
+  id="skills"
+  className="border-t border-white/10 bg-white/[0.015] px-6 py-28"
+>
+  <div className="mx-auto max-w-6xl">
+    <p className="text-sm uppercase tracking-[0.3em] text-blue-400">
+      02 / Technical Skills
+    </p>
+
+    <div className="mt-5 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+      <h2 className="max-w-2xl text-4xl font-semibold tracking-tight sm:text-5xl">
+        Tools, platforms, and engineering skills.
+      </h2>
+
+      <p className="max-w-sm text-sm leading-6 text-gray-500">
+        A mix of simulation, hardware, digital design, and laboratory tools I
+        have used or am currently developing experience with.
+      </p>
+    </div>
+
+    <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="rounded-3xl border border-white/10 bg-white/[0.02] p-7">
+        <p className="text-sm font-medium text-blue-400">Circuit & Lab</p>
+
+        <div className="mt-5 flex flex-wrap gap-2">
+          {[
+            "Circuit Analysis",
+            "LTspice",
+            "Oscilloscopes",
+            "Digital Multimeters",
+            "Function Generators",
+            "Breadboarding",
+          ].map((skill) => (
+            <span
+              key={skill}
+              className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-gray-400"
+            >
+              {skill}
+            </span>
+          ))}
         </div>
-      </section>
+      </div>
 
+      <div className="rounded-3xl border border-white/10 bg-white/[0.02] p-7">
+        <p className="text-sm font-medium text-blue-400">
+          Digital & Embedded
+        </p>
+
+        <div className="mt-5 flex flex-wrap gap-2">
+          {[
+            "Arduino",
+            "C/C++",
+            "Verilog",
+            "FPGA",
+            "Quartus Prime",
+            "Questa / ModelSim",
+          ].map((skill) => (
+            <span
+              key={skill}
+              className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-gray-400"
+            >
+              {skill}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <div className="rounded-3xl border border-white/10 bg-white/[0.02] p-7">
+        <p className="text-sm font-medium text-blue-400">
+          Electrical Engineering
+        </p>
+
+        <div className="mt-5 flex flex-wrap gap-2">
+          {[
+            "Power Systems",
+            "Semiconductor Devices",
+            "Analog Circuits",
+            "Digital Logic",
+            "AC Analysis",
+            "Technical Troubleshooting",
+          ].map((skill) => (
+            <span
+              key={skill}
+              className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-gray-400"
+            >
+              {skill}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
       {/* PROJECTS */}
       {/* PROJECTS */}
 <section id="projects" className="border-t border-white/10 px-6 py-28">
