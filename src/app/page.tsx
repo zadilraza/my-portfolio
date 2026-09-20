@@ -167,15 +167,15 @@ export default function Home() {
   id="home"
   className="relative flex min-h-screen items-center overflow-hidden px-6 pb-16 pt-28"
 >
-  {/* Background glow */}
-  <div className="pointer-events-none absolute left-1/2 top-[32%] h-[550px] w-[550px] -translate-x-1/2 rounded-full bg-blue-600/10 blur-[130px]" />
+  {/* Background glows */}
+  <div className="pointer-events-none absolute left-1/2 top-[32%] h-[550px] w-[550px] -translate-x-1/2 rounded-full bg-blue-600/20 blur-[130px]" />
 
-  <div className="pointer-events-none absolute -right-24 top-1/4 h-80 w-80 rounded-full bg-purple-500/[0.05] blur-[120px]" />
+  <div className="pointer-events-none absolute right-0 top-1/4 h-96 w-96 rounded-full bg-violet-600/10 blur-[140px]" />
 
   <div className="relative z-10 mx-auto w-full max-w-6xl">
     <div className="max-w-4xl">
       {/* Availability */}
-      <div className="mb-7 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm text-gray-400">
+      <div className="mb-7 inline-flex items-center gap-3 rounded-full border border-blue-400/20 bg-blue-400/[0.05] px-4 py-2 text-sm text-blue-200">
         <span className="relative flex h-2 w-2">
           <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-40" />
           <span className="relative inline-flex h-2 w-2 rounded-full bg-green-400" />
@@ -186,16 +186,22 @@ export default function Home() {
 
       {/* Name */}
       <h1 className="text-6xl font-bold tracking-[-0.05em] sm:text-7xl md:text-8xl lg:text-9xl">
-        Adil Zaidi<span className="text-blue-400">.</span>
+        Adil Zaidi
+        <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">
+          .
+        </span>
       </h1>
 
       {/* Main positioning */}
       <h2 className="mt-6 max-w-3xl text-2xl font-medium leading-tight text-gray-300 sm:text-3xl md:text-4xl">
-        Electrical engineering student turning theory into
-        <span className="text-white"> practical hardware experience.</span>
+        Electrical engineering student building experience across
+        <span className="bg-gradient-to-r from-blue-300 to-violet-300 bg-clip-text text-transparent">
+          {" "}
+          circuits, power, embedded systems, and digital hardware.
+        </span>
       </h2>
 
-      <p className="mt-7 max-w-2xl text-base leading-8 text-gray-500 sm:text-lg">
+      <p className="mt-7 max-w-2xl text-base leading-8 text-gray-400 sm:text-lg">
         Studying Electrical Engineering at Arizona State University with
         experience across circuit analysis, power systems, semiconductor
         devices, embedded systems, and digital hardware.
@@ -205,7 +211,7 @@ export default function Home() {
       <div className="mt-10 flex flex-wrap gap-4">
         <a
           href="#projects"
-          className="rounded-full bg-white px-7 py-3.5 font-medium text-black transition duration-300 hover:scale-[1.03] hover:bg-gray-200"
+          className="rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-7 py-3.5 font-medium text-white transition duration-300 hover:scale-[1.03] hover:brightness-110"
         >
           Explore My Work
         </a>
@@ -214,19 +220,19 @@ export default function Home() {
           href="/resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-full border border-white/20 px-7 py-3.5 font-medium text-white transition duration-300 hover:border-white/50 hover:bg-white/5"
+          className="rounded-full border border-white/20 px-7 py-3.5 font-medium text-white transition duration-300 hover:border-violet-400/50 hover:bg-white/5"
         >
           View Resume ↗
         </a>
       </div>
 
       {/* Social Links */}
-      <div className="mt-9 flex flex-wrap gap-x-7 gap-y-3 text-sm text-gray-500">
+      <div className="mt-9 flex flex-wrap gap-x-7 gap-y-3 text-sm text-gray-400">
         <a
           href="https://www.linkedin.com/in/adil-zaidi-aa62b8254/"
           target="_blank"
           rel="noopener noreferrer"
-          className="transition hover:text-white"
+          className="transition hover:text-blue-300"
         >
           LinkedIn ↗
         </a>
@@ -235,24 +241,24 @@ export default function Home() {
           href="https://github.com/zadilraza"
           target="_blank"
           rel="noopener noreferrer"
-          className="transition hover:text-white"
+          className="transition hover:text-violet-300"
         >
           GitHub ↗
         </a>
 
         <a
           href="mailto:zaidiraza@gmail.com"
-          className="transition hover:text-white"
+          className="transition hover:text-blue-300"
         >
           Email ↗
         </a>
       </div>
     </div>
 
-    {/* Currently Learning */}
+    {/* Currently Building */}
     <div className="mt-16 max-w-4xl border-t border-white/10 pt-7">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-8">
-        <p className="text-xs uppercase tracking-[0.25em] text-gray-600">
+        <p className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-xs uppercase tracking-[0.25em] text-transparent">
           Currently Building
         </p>
 
@@ -265,7 +271,7 @@ export default function Home() {
           ].map((item) => (
             <span
               key={item}
-              className="rounded-full border border-white/10 bg-white/[0.02] px-3 py-1.5 text-xs text-gray-400"
+              className="rounded-full border border-violet-400/15 bg-violet-400/[0.04] px-3 py-1.5 text-xs text-gray-300 transition hover:border-violet-400/40 hover:text-white"
             >
               {item}
             </span>
