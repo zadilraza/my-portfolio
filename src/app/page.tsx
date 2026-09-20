@@ -537,64 +537,145 @@ export default function Home() {
 </section>
 
       {/* COURSEWORK */}
-      <section
-        id="coursework"
-        className="border-t border-white/10 bg-white/[0.015] px-6 py-28"
-      >
-        <div className="mx-auto max-w-6xl">
-          <p className="text-sm uppercase tracking-[0.3em] text-blue-400">
-            04 / Coursework
+<section
+  id="coursework"
+  className="border-t border-white/10 bg-white/[0.015] px-6 py-28"
+>
+  <div className="mx-auto max-w-6xl">
+    <p className="text-sm uppercase tracking-[0.3em] text-blue-400">
+      04 / Coursework
+    </p>
+
+    <div className="mt-5 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+      <h2 className="max-w-2xl text-4xl font-semibold tracking-tight sm:text-5xl">
+        Electrical engineering foundation.
+      </h2>
+
+      <p className="max-w-sm text-sm leading-6 text-gray-500">
+        Coursework supporting my interests in circuits, power, semiconductors,
+        and digital hardware.
+      </p>
+    </div>
+
+    <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {[
+        {
+          course: "Circuits I",
+          area: "Circuit Analysis",
+        },
+        {
+          course: "Circuits II",
+          area: "Analog Circuits",
+        },
+        {
+          course: "Hardware Design Language",
+          area: "Verilog & Digital Logic",
+        },
+        {
+          course: "Properties of Semiconductors",
+          area: "Semiconductor Devices",
+        },
+        {
+          course: "Power Systems",
+          area: "Electrical Power",
+        },
+        {
+          course: "Quantum Mechanics",
+          area: "Engineering Physics",
+        },
+      ].map((item) => (
+        <div
+          key={item.course}
+          className="group rounded-3xl border border-white/10 bg-[#080808] p-7 transition duration-300 hover:-translate-y-1 hover:border-blue-400/30 hover:bg-white/[0.03]"
+        >
+          <p className="text-xs uppercase tracking-[0.2em] text-gray-600">
+            {item.area}
           </p>
 
-          <h2 className="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl">
-            Electrical engineering foundation.
-          </h2>
-
-          <div className="mt-12 grid gap-px overflow-hidden rounded-3xl border border-white/10 bg-white/10 sm:grid-cols-2 md:grid-cols-3">
-            {coursework.map((course) => (
-              <div
-                key={course}
-                className="bg-[#080808] p-7 text-gray-300 transition hover:bg-white/[0.04] hover:text-white"
-              >
-                {course}
-              </div>
-            ))}
-          </div>
+          <p className="mt-4 text-xl font-medium text-gray-200 transition group-hover:text-white">
+            {item.course}
+          </p>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* CONTACT */}
-      <section id="contact" className="border-t border-white/10 px-6 py-32">
-        <div className="mx-auto max-w-4xl text-center">
+<section id="contact" className="border-t border-white/10 px-6 py-32">
+  <div className="mx-auto max-w-6xl">
+    <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.025] p-8 sm:p-12 lg:p-16">
+      <div className="grid gap-12 lg:grid-cols-[1fr_auto] lg:items-end">
+        <div>
           <p className="text-sm uppercase tracking-[0.3em] text-blue-400">
             05 / Contact
           </p>
 
-          <h2 className="mt-6 text-5xl font-semibold tracking-tight sm:text-6xl">
-            Let&apos;s build something.
+          <h2 className="mt-6 max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl md:text-6xl">
+            Interested in working together?
           </h2>
 
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-400">
-            I&apos;m currently looking for electrical engineering internship and
-            co-op opportunities and would be glad to connect.
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-400">
+            I&apos;m currently looking for electrical engineering internships
+            and co-op opportunities where I can contribute, learn, and build
+            practical engineering experience.
           </p>
-
-          <a
-            href="mailto:zaidiraza@gmail.com"
-            className="mt-10 inline-block rounded-full bg-white px-8 py-4 font-medium text-black transition duration-300 hover:scale-105"
-          >
-            Get In Touch
-          </a>
         </div>
-      </section>
+
+        <a
+          href="mailto:zaidiraza@gmail.com"
+          className="inline-flex w-fit items-center justify-center rounded-full bg-white px-8 py-4 font-medium text-black transition duration-300 hover:scale-105 hover:bg-gray-200"
+        >
+          Get In Touch
+        </a>
+      </div>
+
+      <div className="mt-12 flex flex-wrap gap-x-8 gap-y-3 border-t border-white/10 pt-7 text-sm text-gray-500">
+        <a
+          href="https://www.linkedin.com/in/adil-zaidi-aa62b8254/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="transition hover:text-white"
+        >
+          LinkedIn ↗
+        </a>
+
+        <a
+          href="https://github.com/zadilraza"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="transition hover:text-white"
+        >
+          GitHub ↗
+        </a>
+
+        <a
+          href="/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="transition hover:text-white"
+        >
+          Resume ↗
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* FOOTER */}
-      <footer className="border-t border-white/10 px-6 py-8">
-        <div className="mx-auto flex max-w-6xl flex-col gap-3 text-sm text-gray-600 sm:flex-row sm:items-center sm:justify-between">
-          <p>© 2026 Adil Zaidi</p>
-          <p>Designed & built with Next.js + Tailwind CSS</p>
-        </div>
-      </footer>
+<footer className="border-t border-white/10 px-6 py-8">
+  <div className="mx-auto flex max-w-6xl flex-col gap-4 text-sm text-gray-600 sm:flex-row sm:items-center sm:justify-between">
+    <p>© 2026 Adil Zaidi</p>
+
+    <div className="flex flex-wrap gap-5">
+      <a href="#home" className="transition hover:text-white">
+        Back to top ↑
+      </a>
+
+      <span>Built with Next.js + Tailwind CSS</span>
+    </div>
+  </div>
+</footer>
     </main>
   );
 }
